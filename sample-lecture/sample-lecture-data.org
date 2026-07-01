@@ -1,0 +1,65 @@
+#+TITLE: Sample Lecture
+#+SUBTITLE: Course Title
+#+AUTHOR: Dr. Ridenour
+#+DATE: July  1, 2026
+#+BEAMER_HEADER: \institute{Department of Philosophy}
+#+BEAMER_THEME: basicwhite[school,sections]
+#+OPTIONS: H:3
+
+* Section
+
+** Subsection
+
+*** Slide 1
+
+- One
+- Two
+- Three
+
+
+**** Slide Note :B_note:
+:PROPERTIES:
+:BEAMER_ENV: noteNH
+:END:
+
+- These are speaker notes.
+- They are displayed on a second screen.
+- The are viewed only by the person giving the presentation.
+
+*** Article Note
+:PROPERTIES:
+:BEAMER_env: ignoreheading
+:HTML_CONTAINER_CLASS: note
+:END:
+
+These are more detailed notes that are only printed on a handout. The handout does not contain the speaker notes. The handout does contain a small representation of the slide with the detailed handout notes below the slide contents.
+
+
+*** Slide 2
+
+1. First
+2. Second
+3. Third
+
+
+**** Slide Note :B_note:
+:PROPERTIES:
+:BEAMER_ENV: noteNH
+:END:
+
+- Speaker notes for slide 2.
+
+*** Article Note
+:PROPERTIES:
+:BEAMER_env: ignoreheading
+:HTML_CONTAINER_CLASS: note
+:END:
+
+
+These are the handout notes for slide 2. These notes can extend over multiple paragraphs with no limits on length.
+
+Donec id elit non mi porta gravida at eget metus. Donec id elit non mi porta gravida at eget metus. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum.
+
+Donec id elit non mi porta gravida at eget metus. Donec id elit non mi porta gravida at eget metus. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum.
+
+

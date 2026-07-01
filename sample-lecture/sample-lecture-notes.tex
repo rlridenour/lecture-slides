@@ -1,0 +1,92 @@
+% Created 2026-07-01 Wed 07:35
+% Intended LaTeX compiler: lualatex
+\documentclass[11pt]{article}
+
+\usepackage{amsmath}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{capt-of}
+\usepackage{hyperref}
+% arara: latexmk: { engine: pdflatex }
+\usepackage{beamerarticle}
+\usepackage{amsmath,amssymb,bm,graphicx,wrapfig,rotating}
+\usepackage[normalem]{ulem}
+\usepackage{url}
+\usepackage[normalem]{ulem}
+\usepackage{microtype}
+\usepackage[american, english]{babel}
+\usepackage[letterpaper,centering]{geometry}
+\usepackage[parfill]{parskip} % Line between paragraphs
+% \usepackage[authordate,url=false,isbn=false,backend=biber]{biblatex-chicago} %Change authordate to notes if desired.
+% \addbibresource{/Users/rlridenour/zotero.bib}
+\clubpenalty = 10000 % Reduce orphans and widows
+\widowpenalty = 10000
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep} % Comment out for wider separation in lists.
+\setlist[enumerate]{noitemsep}
+\usepackage{tcolorbox}
+\mode<article>{\setbeamertemplate{frame begin}{\begin{tcolorbox}[colback=white, colframe=gray,]} \setbeamertemplate{frame end}{\end{tcolorbox}}}
+\usepackage{fontspec}
+\usepackage[math-style=upright]{unicode-math}
+\usepackage{termes-otf}
+\mode<article>{\setbeamertemplate{alerted text begin}{\bfseries\upshape} \setbeamertemplate{alerted text end}{}}
+\usepackage{hyperref}
+\usetheme[school,sections]{basicwhite}
+\author{Dr. Ridenour}
+\date{July  1, 2026}
+\title{Sample Lecture}
+\subtitle{Course Title}
+\institute{Department of Philosophy}
+\hypersetup{
+ pdfauthor={Dr. Ridenour},
+ pdftitle={Sample Lecture},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={},
+ pdflang={English}}
+\usepackage{biblatex}
+\addbibresource{~/Dropbox/bibtex/rlr.bib}
+\begin{document}
+
+\maketitle
+\section{Section}
+\label{sec:org433079e}
+
+\subsection{Subsection}
+\label{sec:org0c5130f}
+
+\begin{frame}[label={sec:orgbd1568c}]
+ \frametitle{Slide 1}
+\begin{itemize}
+\item One
+\item Two
+\item Three
+\end{itemize}
+\note{\begin{itemize}
+\item These are speaker notes.
+\item They are displayed on a second screen.
+\item The are viewed only by the person giving the presentation.
+\end{itemize}}
+\end{frame}
+These are more detailed notes that are only printed on a handout. The handout does not contain the speaker notes. The handout does contain a small representation of the slide with the detailed handout notes below the slide contents.
+\begin{frame}[label={sec:org92d8d32}]
+ \frametitle{Slide 2}
+\begin{enumerate}
+\item First
+\item Second
+\item Third
+\end{enumerate}
+\note{\begin{itemize}
+\item Speaker notes for slide 2.
+\end{itemize}}
+\end{frame}
+These are the handout notes for slide 2. These notes can extend over multiple paragraphs with no limits on length.
+
+Donec id elit non mi porta gravida at eget metus. Donec id elit non mi porta gravida at eget metus. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum.
+
+Donec id elit non mi porta gravida at eget metus. Donec id elit non mi porta gravida at eget metus. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum.
+\end{document}
