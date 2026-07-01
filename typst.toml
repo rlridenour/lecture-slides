@@ -1,0 +1,6 @@
+[package]
+name = "lecture-slides"
+version = "0.1.0"
+entrypoint = "lib.typ"
+description = "Beamer-like lecture slides with speaker notes and handout mode"
+authors = ["Randy Ridenour"]
