@@ -88,9 +88,18 @@ All three functions (`slide`, `section-slide`, `article-note`) are defined in bo
 | Function | Slides mode | Handout mode |
 |---|---|---|
 | `slides.setup.with(...)` / `handout.setup.with(...)` | Sets double-wide page, Fira Sans font | Sets US letter page, serif font |
-| `slide(title:, note:)[body]` | Left half = content, right half = speaker notes | Bordered box with title + content; note suppressed |
+| `slide(title:, note:, full-bleed:)[body]` | Left half = content, right half = speaker notes | Bordered box with title + content; note suppressed |
 | `section-slide(title)` | Full-width section divider slide | Bold section heading inline |
 | `article-note[body]` | Suppressed | Paragraph text below the slide box |
+
+### `full-bleed` slides
+
+`slide(full-bleed: true)[body]` removes all padding from the slide content area. Use it for:
+
+- **Full-height images**: `#image("file.jpg", height: 100%)` fills the slide panel. In handout mode, the box is fixed at 70mm tall so `height: 100%` resolves correctly.
+- **Centered typographic slides**: combine with `#place(center + horizon)[...]` for a single prominent statement with no title.
+
+Two-column layouts do not require `full-bleed` — use `#grid(columns: (1fr, 1fr), ...)` directly in the slide body.
 
 ## Local Installation
 
