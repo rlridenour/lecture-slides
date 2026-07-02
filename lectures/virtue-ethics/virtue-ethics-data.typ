@@ -68,4 +68,64 @@
     external goods matter, though he insists that virtue is the most important
     component of the good life.
   ]
+
+  slide(title: "Virtue vs. Vice: Examples", note: [
+    - Walk through each row and ask students to identify the virtuous mean.
+    - Emphasize that the mean is situational, not a fixed rule.
+  ])[
+    #grid(
+      columns: (1fr, 1fr),
+      column-gutter: 2em,
+      row-gutter: 0.6em,
+      align: top,
+      [*Deficiency*], [*Excess*],
+      line(length: 100%), line(length: 100%),
+      [Cowardice], [Recklessness],
+      [Miserliness], [Profligacy],
+      [Insensibility], [Self-indulgence],
+      [Understatement], [Boastfulness],
+    )
+  ]
+
+  article-note[
+    This table illustrates Aristotle's doctrine of the mean across several
+    virtues. The virtuous disposition — courage, generosity, temperance, and
+    truthfulness — lies between a deficiency on the left and an excess on the
+    right. Note that the corresponding virtues (courage, generosity, temperance,
+    truthfulness) are not shown here; students are asked to supply them.
+  ]
+
+  slide(full-bleed: true, note: [
+    - Pause here before moving on.
+    - Aristotle's answer: yes, but only through practice and habituation, not instruction alone.
+  ])[
+    #place(center + horizon)[
+      #text(size: 2.5em, weight: "bold")[Can virtue be taught?]
+    ]
+  ]
+
+  article-note[
+    This is one of the oldest questions in Greek ethics, raised in Plato's
+    *Meno*. Aristotle's answer is nuanced: virtues cannot be taught the way
+    mathematics is taught. They must be cultivated through habituation — by
+    repeatedly performing virtuous actions until the disposition becomes stable
+    and second nature.
+  ]
+
+  slide(full-bleed: true, note: [
+    - Aristotle, 384–322 BCE.
+    - Student of Plato; tutor of Alexander the Great.
+    - Founded the Lyceum in Athens.
+  ])[
+    #align(center)[
+      #image("aristotle.jpg", height: 100%)
+    ]
+  ]
+
+  article-note[
+    Aristotle studied at Plato's Academy for twenty years before founding his
+    own school, the Lyceum. His surviving works on ethics — primarily the
+    *Nicomachean Ethics* and the *Eudemian Ethics* — remain foundational texts
+    in moral philosophy.
+  ]
 }

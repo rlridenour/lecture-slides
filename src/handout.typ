@@ -33,23 +33,34 @@
 }
 
 /// Slide content rendered in a bordered box. Speaker notes are suppressed.
-#let slide(title: none, note: [], body) = {
+/// `full-bleed: true` renders a fixed-height box (for images or centered text).
+#let slide(title: none, note: [], full-bleed: false, body) = {
   v(0.6em)
-  block(
-    width: 100%,
-    stroke: 0.5pt + luma(150),
-    fill: white,
-    inset: (x: 1em, y: 0.8em),
-    radius: 2pt,
-  )[
-    #if title != none [
-      #text(weight: "bold")[#title]
-      #v(0.3em)
-      #line(length: 100%, stroke: 0.3pt + luma(180))
-      #v(0.4em)
+  if full-bleed {
+    block(
+      width: 100%,
+      height: 70mm,
+      stroke: 0.5pt + luma(150),
+      fill: white,
+      clip: true,
+    )[#body]
+  } else {
+    block(
+      width: 100%,
+      stroke: 0.5pt + luma(150),
+      fill: white,
+      inset: (x: 1em, y: 0.8em),
+      radius: 2pt,
+    )[
+      #if title != none [
+        #text(weight: "bold")[#title]
+        #v(0.3em)
+        #line(length: 100%, stroke: 0.3pt + luma(180))
+        #v(0.4em)
+      ]
+      #body
     ]
-    #body
-  ]
+  }
 }
 
 /// Section heading in handout mode.

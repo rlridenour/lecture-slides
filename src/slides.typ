@@ -77,11 +77,13 @@
 }
 
 /// Individual slide. `note` appears on the right (second screen).
+/// `full-bleed: true` removes padding — use for images or centered text.
 /// Place `article-note` calls after each slide for handout notes.
-#let slide(title: none, note: [], body) = {
+#let slide(title: none, note: [], full-bleed: false, body) = {
   pagebreak(weak: false)
-  grid(
-    columns: (_slide-w, _slide-w),
+  let slide-content = if full-bleed {
+    _slide-box(body)
+  } else {
     _slide-box[
       #pad(x: 1.5em, top: 1em, bottom: 1em)[
         #if title != none [
@@ -93,7 +95,11 @@
         ]
         #body
       ]
-    ],
+    ]
+  }
+  grid(
+    columns: (_slide-w, _slide-w),
+    slide-content,
     _note-box[
       #pad(1.2em)[
         #text(size: 0.8em)[#note]
