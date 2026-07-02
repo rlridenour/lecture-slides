@@ -22,8 +22,8 @@
 )
 
 /// Configure the document as a slide presentation. Use as a show rule:
-/// `#show: slides.with(title: "...", author: "...", ...)`
-#let slides(
+/// `#show: slides.setup.with(title: "...", author: "...", ...)`
+#let setup(
   title: none,
   subtitle: none,
   author: none,

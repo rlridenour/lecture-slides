@@ -1,8 +1,8 @@
 // Compile: typst compile demo.typ
-#import "src/slides.typ": slides, slide, section-slide, article-note
+#import "@local/lecture-slides:0.1.0": slides
 #import "demo-data.typ": content
 
-#show: slides.with(
+#show: slides.setup.with(
   title: "Sample Lecture",
   subtitle: "Course Title",
   author: "Dr. Ridenour",
@@ -10,4 +10,4 @@
   institution: "Department of Philosophy",
 )
 
-#content(slide, section-slide, article-note)
+#content(slides.slide, slides.section-slide, slides.article-note)

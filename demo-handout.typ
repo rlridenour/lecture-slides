@@ -1,8 +1,8 @@
 // Compile: typst compile demo-handout.typ
-#import "src/handout.typ": handout, slide, section-slide, article-note
+#import "@local/lecture-slides:0.1.0": handout
 #import "demo-data.typ": content
 
-#show: handout.with(
+#show: handout.setup.with(
   title: "Sample Lecture",
   subtitle: "Course Title",
   author: "Dr. Ridenour",
@@ -10,4 +10,4 @@
   institution: "Department of Philosophy",
 )
 
-#content(slide, section-slide, article-note)
+#content(handout.slide, handout.section-slide, handout.article-note)

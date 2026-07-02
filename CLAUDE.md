@@ -20,11 +20,10 @@ src/
   handout.typ            # handout mode implementation
 ```
 
-Import by subpath for direct access to all functions:
+Import both modes as module objects from the package entrypoint:
 
 ```typst
-#import "@local/lecture-slides:0.1.0/src/slides.typ": *
-#import "@local/lecture-slides:0.1.0/src/handout.typ": *
+#import "@local/lecture-slides:0.1.0": slides, handout
 ```
 
 ## Workflow
@@ -50,22 +49,22 @@ Each lecture lives in its own directory with three files:
 
 **`lecture-slides.typ`** — slides wrapper:
 ```typst
-#import "@local/lecture-slides:0.1.0/src/slides.typ": slides, slide, section-slide, article-note
+#import "@local/lecture-slides:0.1.0": slides
 #import "lecture-data.typ": content
 
-#show: slides.with(title: "...", subtitle: "...", author: "...", date: "...", institution: "...")
+#show: slides.setup.with(title: "...", subtitle: "...", author: "...", date: "...", institution: "...")
 
-#content(slide, section-slide, article-note)
+#content(slides.slide, slides.section-slide, slides.article-note)
 ```
 
 **`lecture-handout.typ`** — handout wrapper:
 ```typst
-#import "@local/lecture-slides:0.1.0/src/handout.typ": handout, slide, section-slide, article-note
+#import "@local/lecture-slides:0.1.0": handout
 #import "lecture-data.typ": content
 
-#show: handout.with(title: "...", subtitle: "...", author: "...", date: "...", institution: "...")
+#show: handout.setup.with(title: "...", subtitle: "...", author: "...", date: "...", institution: "...")
 
-#content(slide, section-slide, article-note)
+#content(handout.slide, handout.section-slide, handout.article-note)
 ```
 
 Compile both outputs:
@@ -88,7 +87,7 @@ All three functions (`slide`, `section-slide`, `article-note`) are defined in bo
 
 | Function | Slides mode | Handout mode |
 |---|---|---|
-| `slides.with(...)` / `handout.with(...)` | Sets double-wide page, Fira Sans font | Sets US letter page, serif font |
+| `slides.setup.with(...)` / `handout.setup.with(...)` | Sets double-wide page, Fira Sans font | Sets US letter page, serif font |
 | `slide(title:, note:)[body]` | Left half = content, right half = speaker notes | Bordered box with title + content; note suppressed |
 | `section-slide(title)` | Full-width section divider slide | Bold section heading inline |
 | `article-note[body]` | Suppressed | Paragraph text below the slide box |

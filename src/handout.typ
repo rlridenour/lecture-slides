@@ -1,8 +1,8 @@
 // Handout mode — slide content in bordered boxes with detailed notes below
 
 /// Configure the document as a handout. Use as a show rule:
-/// `#show: handout.with(title: "...", author: "...", ...)`
-#let handout(
+/// `#show: handout.setup.with(title: "...", author: "...", ...)`
+#let setup(
   title: none,
   subtitle: none,
   author: none,
