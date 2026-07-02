@@ -44,31 +44,23 @@
   grid(
     columns: (_slide-w, _slide-w),
     _slide-box[
-      #place(center + horizon)[
-        #align(center)[
-          #pad(x: 2.5em)[
-            #if title != none [
-              #text(size: 1.6em, weight: "bold")[#title]
-            ]
-            #if subtitle != none [
-              #v(0.3em)
-              #text(size: 1.1em, fill: luma(80))[#subtitle]
-            ]
-            #v(1.5em)
-            #if author != none [
-              #text(size: 0.95em)[#author]
-            ]
-            #if institution != none [
-              #v(0.2em)
-              #text(size: 0.85em, fill: luma(60))[#institution]
-            ]
-            #if date != none [
-              #v(0.2em)
-              #text(size: 0.85em, fill: luma(60))[#date]
-            ]
-          ]
-        ]
-      ]
+      #layout(size => context {
+        let text-block = {
+          let items = ()
+          if title != none { items.push(text(size: 1.8em, weight: "bold", title)) }
+          if subtitle != none { items.push(text(size: 1.1em, weight: "bold", subtitle)) }
+          items.push(1.2em)
+          if author != none { items.push(text(size: 0.9em, author)) }
+          if institution != none { items.push(text(size: 0.85em, institution)) }
+          if date != none { items.push(text(size: 0.85em, date)) }
+          pad(left: 2em, stack(dir: ttb, spacing: 0.25em, ..items))
+        }
+        let logo = pad(right: 2em, image("../school.png", height: 5em))
+        let text-h = measure(text-block).height
+        let logo-h = measure(logo).height
+        place(top + left, dy: (size.height - text-h) / 2, text-block)
+        place(top + right, dy: (size.height - logo-h) / 2, logo)
+      })
     ],
     _note-box[],
   )
